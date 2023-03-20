@@ -61,9 +61,9 @@
             <div class="carousel-caption top-0 d-md-block">
                 <p class="mt-5 fs-5 text-uppercase">Your favourite Shop</p>
                 <h1 class="display-1 fw-bolder">TechGearShop</h1>
-                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                <a class="btn btn-success px-3 py-2 fs-5 mt-3"
                         onclick="document.getElementById('scroll-about-us').scrollIntoView();">About us
-                </button>
+                </a>
             </div>
         </div>
         <div class="carousel-item c-item">
@@ -72,9 +72,9 @@
             <div class="carousel-caption top-0">
                 <p class="mt-5 fs-5 text-uppercase">First month</p>
                 <h1 class="display-1 fw-bolder">50% Cheaper</h1>
-                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                <a class="btn btn-success px-3 py-2 fs-5 mt-3"
                         onclick="document.getElementById('scroll-products').scrollIntoView();">Order now
-                </button>
+                </a>
             </div>
         </div>
         <div class="carousel-item c-item">
@@ -83,9 +83,9 @@
             <div class="carousel-caption top-0">
                 <p class="mt-5 fs-5 text-uppercase">Do you have any questions?</p>
                 <h1 class="display-1 fw-bolder">Contact us</h1>
-                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                <a class="btn btn-success px-3 py-2 fs-5 mt-3"
                         onclick="document.getElementById('scroll-support').scrollIntoView();">We don't bite
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -178,8 +178,8 @@
                         We customize them to make sure each one of them is unique. Our team loves to surprise their
                         client, so You can look forward for a bonus gift :)
                     </p>
-                    <a href="#" class="btn btn-primary mt-auto" id="subscription-20" data-bs-toggle="modal"
-                       data-bs-target="#order-modal" >Subscription 20$</a>
+                    <a href="#" class="btn btn-success mt-auto" id="subscription-20" data-bs-toggle="modal"
+                       data-bs-target="#order-modal">Subscription 20$</a>
                 </div>
             </div>
         </div>
@@ -197,7 +197,7 @@
                         give the item ID.
                         You will also get a T-shirt with our logo, so You can proudly be a member of our gadget nation.
                     </p>
-                    <a href="#" class="btn btn-primary mt-auto" id="subscription-30" data-bs-toggle="modal"
+                    <a href="#" class="btn btn-success mt-auto" id="subscription-30" data-bs-toggle="modal"
                        data-bs-target="#order-modal">Subscription 30$</a>
                 </div>
             </div>
@@ -208,10 +208,12 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title fw-bolder">Subscription</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="saveData()" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="saveData()"
+                            aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-start row">
-                    <form action="mailto:krystiancichorz708@gmail.com" class="col-6 mt-2" onsubmit="return orderValidation()">
+                    <form action="mailto:krystiancichorz708@gmail.com" class="col-6 mt-2"
+                          onsubmit="return orderValidation()">
                         <div class="col">
                             <label for="orderName" class="form-label"
                                    aria-labelledby="name">Your Name:</label>
@@ -266,7 +268,8 @@
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentCard" id="mastercard" value="mastercard" checked>
+                                <input class="form-check-input" type="radio" name="paymentCard" id="mastercard"
+                                       value="mastercard" checked>
                                 <label class="form-check-label" for="mastercard">
                                     Mastercard
                                 </label>
@@ -281,12 +284,11 @@
                             </div>
                         </div>
                         <div class="col mt-2 d-flex flex-column">
-                                <button type="submit" class="btn btn-primary btn-block mb-2">Confirm</button>
-                                <button type="reset" class="btn btn-primary btn-block">Reset</button>
+                            <button type="submit" class="btn btn-success btn-block mb-2">Confirm</button>
+                            <button type="reset" class="btn btn-success btn-block">Reset</button>
                         </div>
                     </form>
-
-                    <div class="order-info border col-6">
+                    <div class="order-info col-6">
                     </div>
                 </div>
             </div>
@@ -366,49 +368,48 @@
         </div>
         <div class="col-md-5 text-center d-flex flex-column" data-aos="fade-in">
             <h3 class="mt-4">Say Hello!</h3>
-            <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal"
-                    data-bs-target="#contact-modal">Click Me!
-            </button>
-            <div class="modal fade" id="contact-modal" data-bs-backdrop="static" data-bs-keyboard="false">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title fw-bolder">Contact us!</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-start">
-                            <form action="#">
-                                <div class="row mb-3">
-                                    <div class="col-6">
-                                        <label for="nameInput" class="form-label" aria-labelledby="name">Your
-                                            Name:</label>
-                                        <input type="text" id="nameInput" class="form-control"
-                                               aria-describedby="name block">
-                                    </div>
-                                    <div class="col-6">
-                                        <label for="emailInput" class="form-label"
-                                               aria-labelledby="email">Email:</label>
-                                        <input type="email" id="emailInput" class="form-control"
-                                               aria-describedby="email block">
-                                    </div>
+            <a href="#" class="btn btn-success mt-auto" data-bs-toggle="modal"
+               data-bs-target="#contact-modal">Click Me</a>
+        </div>
+    </div>
+        <div class="modal fade" id="contact-modal" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bolder">Contact us!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <form action="#">
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label for="nameInput" class="form-label" aria-labelledby="name">Your
+                                        Name:</label>
+                                    <input type="text" id="nameInput" class="form-control"
+                                           aria-describedby="name block">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="messageInput" class="form-label"
-                                           aria-labelledby="message">Message:</label>
-                                    <textarea id="messageInput" class="form-control"
-                                              aria-describedby="message block" rows="6"></textarea>
+                                <div class="col-6">
+                                    <label for="emailInput" class="form-label"
+                                           aria-labelledby="email">Email:</label>
+                                    <input type="email" id="emailInput" class="form-control"
+                                           aria-describedby="email block">
                                 </div>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <button type="submit" class="btn btn-primary btn-block mx-2 w-50">Send</button>
-                                    <button type="reset" class="btn btn-primary btn-block mx-2 w-50">Reset</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="messageInput" class="form-label"
+                                       aria-labelledby="message">Message:</label>
+                                <textarea id="messageInput" class="form-control"
+                                          aria-describedby="message block" rows="6"></textarea>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <button type="submit" class="btn btn-success btn-block mx-2 w-50">Send</button>
+                                <button type="reset" class="btn btn-success btn-block mx-2 w-50">Reset</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
 <section class="footer mx-5 ">
     <div class="container-fluid mt-5">
@@ -433,21 +434,21 @@
                     </div>
                     <div class="col-md-4 col-sm-12 col-12 mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#"
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #3b5998" href="#"
                            role="button"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href=""
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #55acee" href=""
                            role="button">
                             <i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#"
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #dd4b39" href="#"
                            role="button">
                             <i class="fab fa-google"></i></a>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#"
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #ac2bac" href="#"
                            role="button">
                             <i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#"
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #0082ca" href="#"
                            role="button">
                             <i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#"
+                        <a class="btn btn-success btn-floating m-1" style="background-color: #333333" href="#"
                            role="button">
                             <i class="fab fa-github"></i></a>
                     </div>

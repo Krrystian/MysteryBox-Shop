@@ -16,6 +16,6 @@
 a{
     text-decoration: none;
 }
-.bor{
-    border: 3px solid navy;
+.order-info{
+    border-left: 3px solid darkgreen;
 }

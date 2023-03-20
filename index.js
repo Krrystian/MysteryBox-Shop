@@ -80,7 +80,6 @@ function orderValidation(){
     if(!numberRegex.test(number.value)) {number.setCustomValidity('Incorrect Phone Number');  check=false;}
     if(!numberRegex.test(card.value)){card.setCustomValidity('Incorrect Card Number');  check=false;}
     return check === true;
-
 }
 orderOnClick();
 closeOnClick();
