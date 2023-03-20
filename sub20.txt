@@ -1,0 +1,33 @@
+                        <h3 class="text-center mt-3">Summary</h3>
+                        <div class="row">
+                            <div class="col-6 text-start">
+                                Item:
+                            </div>
+                            <div class="col-6 text-end">
+                                Mystery Box
+                            </div>
+                            <div class="col-6 text-start">
+                                Quantity:
+                            </div>
+                            <div class="col-6 text-end">
+                                1
+                            </div>
+                            <div class="col-6 text-start">
+                                VAT:
+                            </div>
+                            <div class="col-6 text-end">
+                                4.6$
+                            </div>
+                            <div class="col-6 text-start">
+                                Discount:
+                            </div>
+                            <div class="col-6 text-end">
+                                -50$
+                            </div>
+                            <div class="col-6 text-start fw-bold">
+                                Total price:
+                            </div>
+                            <div class="col-6 text-end fw-bold">
+                                10$ <br> <span class="fw-normal">then 20$/mth</span>
+                            </div>
+                        </div>

@@ -1,0 +1,21 @@
+.c-item{
+    height:  450px;
+}
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.about-con{
+    height: 650px;
+}
+.about-img{
+    height: 100%;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+}
+.bor{
+    border: 3px solid navy;
+}

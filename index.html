@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!--TODO: **1.CLOSE NAVBAR ON CLI**
+          ??3. BETTER BUTTONS??
+          **4. ON SCROLL ANIMATION**
+          **5. ORDER MODALS WITH FORMS**
+          **5.5 JS TO STORAGE & RETRIVE DATA**
+          **5.6 DATA VALIDATION**
+          **6. FOOTER**
+          6.5 GEOLOCATION
+          **7. ASYNC & FETCH API -> MODAL ORDER INFO LOAD FROM TXT**
+          **8. BETTER PRODUCT & SUPPORT FLOW**
+          **9. BEST CHOICE BETTER MARGIN** -->
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>TechGearShop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/3b82c12b72.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <button class="navbar-toggler border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarInsides"
+                aria-label="menu">
+            <i class="fas fa-hamburger"></i>
+        </button>
+        <span class="navbar-brand mb-0 text-center text-lg-start" href="#">TechGearShop</span>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarInsides">
+            <ul class="navbar-nav mb-0 mb-lg-0 align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#img-carousel">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scroll-about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scroll-products">Order Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scroll-support">Support</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="img-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#img-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                 class="d-block w-100 c-img" alt="Slide 1">
+            <div class="carousel-caption top-0 d-md-block">
+                <p class="mt-5 fs-5 text-uppercase">Your favourite Shop</p>
+                <h1 class="display-1 fw-bolder">TechGearShop</h1>
+                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                        onclick="document.getElementById('scroll-about-us').scrollIntoView();">About us
+                </button>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                 class="d-block w-100 c-img" alt="Slide 2">
+            <div class="carousel-caption top-0">
+                <p class="mt-5 fs-5 text-uppercase">First month</p>
+                <h1 class="display-1 fw-bolder">50% Cheaper</h1>
+                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                        onclick="document.getElementById('scroll-products').scrollIntoView();">Order now
+                </button>
+            </div>
+        </div>
+        <div class="carousel-item c-item">
+            <img src="https://images.unsplash.com/photo-1527600478564-488952effedb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                 class="d-block w-100 c-img" alt="Slide 3">
+            <div class="carousel-caption top-0">
+                <p class="mt-5 fs-5 text-uppercase">Do you have any questions?</p>
+                <h1 class="display-1 fw-bolder">Contact us</h1>
+                <button class="btn btn-primary px-3 py-2 fs-5 mt-3"
+                        onclick="document.getElementById('scroll-support').scrollIntoView();">We don't bite
+                </button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#img-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#img-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<section class="why-we mx-5 px-3">
+    <h1 class="text-center my-5 pt-3 fw-bolder">We are the best choice.</h1>
+    <div class="row gy-3">
+        <div class="col-md">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title text-center">High Quality</h4>
+                    <p class="card-text pt-3">
+                        We offer the most refined tech gear products, you can imagine.
+                        We use high-end materials such as carbon or hardened steel, just to make them feel and look
+                        great.
+                        Our products are not overpriced. We give the lifetime warranty on them.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Worldwide Shipping</h4>
+                    <p class="card-text pt-3">
+                        Since we are prosperous company located in EU from the begging of 2023 we
+                        offer shipping to all continents (excluding Greenland).
+                        We are currently working on minimizing the cost of shipping.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Happy Customers</h4>
+                    <p class="card-text pt-3">
+                        Our experience and professional approach has been marked positively.
+                        We will make you feel special, with every monthly bundle, you will get bonuses.
+                        If you have any question, please leave us a message, we will help you!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-us mx-5 px-3" id="scroll-about-us">
+    <h1 class="text-center fw-bolder my-5 pt-3" data-aos="fade-in">About us</h1>
+    <div class="row gy-3 align-items-center">
+        <div class="col-md" data-aos="fade-in">
+            <h1 class="text-center fs-1 mb-3">Hi, we're TechGear.</h1>
+            <p>
+                We're connecting our passion to gadgets and technology
+                through fantastic team since 2010.
+                Our gadgets are not only for fun. They are made based on
+                real-life situations that can happen. We want to make your life easier.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cupiditate delectus eaque eveniet iste maxime modi natus nemo nihil omnis quae quia, quibusdam quo
+                reiciendis saepe sequi sint tenetur veritatis voluptatum!
+            </p>
+        </div>
+        <div class="col-md about-con" data-aos="fade-in">
+            <img src="https://images.unsplash.com/photo-1620783770629-122b7f187703?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2FkZ2V0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=900&q=60"
+                 class="d-block w-100 about-img" alt="Love and design">
+        </div>
+    </div>
+</section>
+<section class="products mx-5 px-3" id="scroll-products">
+    <h1 class="text-center fw-bolder my-5 pt-3" data-aos="fade-in">Products</h1>
+    <div class="row gy-3" data-aos="fade-in">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1605463969216-21e9e8a81d3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1782&q=80"
+                     class="card-img-top" alt="mystery box">
+                <div class="card-header">
+                    <h4 class="text-center pt-2">Mystery Box</h4>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p class="card-text">
+                        Hop into gadget's world! In this box you can get our monthly one of three our main products!
+                        We customize them to make sure each one of them is unique. Our team loves to surprise their
+                        client, so You can look forward for a bonus gift :)
+                    </p>
+                    <a href="#" class="btn btn-primary mt-auto" id="subscription-20" data-bs-toggle="modal"
+                       data-bs-target="#order-modal" >Subscription 20$</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <img src="https://images.unsplash.com/photo-1615678857339-4e7e51ce22db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                     class="card-img-top" alt="premium mystery box">
+                <div class="card-header">
+                    <h4 class="text-center pt-2 ">Premium Mystery Box</h4>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <p class="card-text">
+                        You're a Connoisseur... huh? If yes then this is a package for You.
+                        We will not only give You a unique customized gadget, but also we will engrave your initials and
+                        give the item ID.
+                        You will also get a T-shirt with our logo, so You can proudly be a member of our gadget nation.
+                    </p>
+                    <a href="#" class="btn btn-primary mt-auto" id="subscription-30" data-bs-toggle="modal"
+                       data-bs-target="#order-modal">Subscription 30$</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="order-modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bolder">Subscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="saveData()" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start row">
+                    <form action="mailto:krystiancichorz708@gmail.com" class="col-6 mt-2" onsubmit="return orderValidation()">
+                        <div class="col">
+                            <label for="orderName" class="form-label"
+                                   aria-labelledby="name">Your Name:</label>
+                            <input type="text" id="orderName" class="form-control"
+                                   aria-describedby="name block" required>
+                        </div>
+                        <div class="col mt-2">
+                            <label for="orderEmail" class="form-label"
+                                   aria-labelledby="email">Email:</label>
+                            <input type="text" id="orderEmail" class="form-control"
+                                   aria-describedby="email block" required>
+                        </div>
+                        <div class="col mt-2">
+                            <label for="phoneNumber" class="form-label"
+                                   aria-labelledby="email">Phone number:</label>
+                            <input type="text" id="phoneNumber" class="form-control"
+                                   aria-describedby="email block" required>
+                        </div>
+                        <div class="col mt-2">
+                            <label for="cardID" class="form-label"
+                                   aria-labelledby="email">Card serial number:</label>
+                            <input type="text" inputmode="numeric" id="cardID" class="form-control"
+                                   aria-describedby="email block" required>
+                        </div>
+                        <div class="col mt-2">
+                            <label for="orderCCV" class="form-label"
+                                   aria-labelledby="email">CCV:</label>
+                            <input type="text" inputmode="numeric" id="orderCCV" class="form-control"
+                                   aria-describedby="email block" required>
+                        </div>
+
+                        <div class="col mt-2">
+                            <label for="orderCountry" class="form-label"
+                                   aria-labelledby="email">Country:</label>
+                            <select class="form-select form-select-sm" id="orderCountry" aria-label="Country select"
+                                    required>
+                                <option value="PL">Poland</option>
+                                <option value="GER">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="BEL">Belgium</option>
+                                <option value="USA">USA</option>
+                                <option value="MEX">Mexico</option>
+                                <option value="SWE">Sweden</option>
+                                <option value="ENG">England</option>
+                            </select>
+                        </div>
+                        <div class="col mt-2 d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentCard" id="visa" value="visa">
+                                <label class="form-check-label" for="visa">
+                                    Visa
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentCard" id="mastercard" value="mastercard" checked>
+                                <label class="form-check-label" for="mastercard">
+                                    Mastercard
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col mt-2 d-flex justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sms-tracking" checked>
+                                <label class="form-check-label" for="sms-tracking">
+                                    SMS Tracking
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col mt-2 d-flex flex-column">
+                                <button type="submit" class="btn btn-primary btn-block mb-2">Confirm</button>
+                                <button type="reset" class="btn btn-primary btn-block">Reset</button>
+                        </div>
+                    </form>
+
+                    <div class="order-info border col-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="support mx-5 px-3" id="scroll-support">
+    <h1 class="text-center fw-bolder my-5 pt-3" data-aos="fade-in">Support</h1>
+
+    <div class="row d-flex flex-md-row flex-sm-column-reverse gy-3" data-aos="fade-in">
+        <div class="col-md-7">
+            <div class="accordion" id="support-faq">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1"
+                                aria-expanded="true" aria-controls="collapse2">
+                            What's average shipping time?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                         data-bs-parent="#support-faq">
+                        <div class="accordion-body">
+                            After 10 years on the marked we estimated average time. <strong>For Europe 4 - 9 work
+                            days.</strong>
+                            Time might be different for each region and part of the year. But we will make sure to
+                            deliver
+                            your
+                            box as fast as possible.
+                            For N.A. Time might be longer, up to 15 days.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2"
+                                aria-expanded="true" aria-controls="collapse2">
+                            What if I don't like my gift?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                         data-bs-parent="#support-faq">
+                        <div class="accordion-body">
+                            <strong> Message us!</strong>
+                            We will make everything to make You happy! If the product is damaged, we offer replacements.
+                            Unfortunately we don't offer replacements for Premium Box products since they're made on
+                            demand.
+                            If You feel like we can make something better, don't hesitate and DM us too! We love
+                            feedback.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3"
+                                aria-expanded="true" aria-controls="collapse3">
+                            How to cancel subscription?
+                        </button>
+                    </div>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                         data-bs-parent="#support-faq">
+                        <div class="accordion-body">
+                            <strong>It's simple! Message us.</strong>
+                            If You're considering canceling your subscription, firstly it's sad to hear that!
+                            No matter if it's happy or sad moment, we always stay professional. We don't need
+                            explanation
+                            why You are leaving us, but we're looking for feeding, so if You mind telling us... We will
+                            be
+                            happy!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 text-center d-flex flex-column" data-aos="fade-in">
+            <h3 class="mt-4">Say Hello!</h3>
+            <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal"
+                    data-bs-target="#contact-modal">Click Me!
+            </button>
+            <div class="modal fade" id="contact-modal" data-bs-backdrop="static" data-bs-keyboard="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bolder">Contact us!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start">
+                            <form action="#">
+                                <div class="row mb-3">
+                                    <div class="col-6">
+                                        <label for="nameInput" class="form-label" aria-labelledby="name">Your
+                                            Name:</label>
+                                        <input type="text" id="nameInput" class="form-control"
+                                               aria-describedby="name block">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="emailInput" class="form-label"
+                                               aria-labelledby="email">Email:</label>
+                                        <input type="email" id="emailInput" class="form-control"
+                                               aria-describedby="email block">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="messageInput" class="form-label"
+                                           aria-labelledby="message">Message:</label>
+                                    <textarea id="messageInput" class="form-control"
+                                              aria-describedby="message block" rows="6"></textarea>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <button type="submit" class="btn btn-primary btn-block mx-2 w-50">Send</button>
+                                    <button type="reset" class="btn btn-primary btn-block mx-2 w-50">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer mx-5 ">
+    <div class="container-fluid mt-5">
+        <footer class="text-center text-white d-md-flex flex-row p-3" style="background-color: #0b5ed7">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 col-sm-6 col-12 d-flex flex-column">
+                        <h6 class="text-uppercase mb-4 my-3 font-weight-bold">
+                            Orders
+                        </h6>
+                        <a class="text-white mb-2" href="#">Complains</a>
+                        <a class="text-white mb-2" href="#">Payment</a>
+                        <a class="text-white mb-2" href="#">Protection</a>
+                        <a class="text-white mb-2" href="#">Delivery</a>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 d-flex mt-3 flex-column">
+                        <h6 class="text-uppercase mb-4 font-weight-bold contact-list">Contact</h6>
+                        <a class="text-white mb-2"><i class="fas fa-home "></i> Poland, 20-000 Lublin, PL</a>
+                        <a class="text-white mb-2"><i class="fas fa-envelope"></i> info@techgear.com</a>
+                        <a class="text-white mb-2"><i class="fas fa-phone"></i> + 48 000 000 00</a>
+                        <a class="text-white mb-2"><i class="fas fa-print"></i> + 48 000 000 00</a>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-12 mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#"
+                           role="button"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href=""
+                           role="button">
+                            <i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#"
+                           role="button">
+                            <i class="fab fa-google"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#"
+                           role="button">
+                            <i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#"
+                           role="button">
+                            <i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#"
+                           role="button">
+                            <i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="text-center p-3 text-white" style="background-color: #073d8d;)">
+            © 2023 Kryss_;
+        </div>
+    </div>
+</section>
+<script src="index.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
