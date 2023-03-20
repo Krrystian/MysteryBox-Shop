@@ -9,7 +9,8 @@
           6.5 GEOLOCATION
           **7. ASYNC & FETCH API -> MODAL ORDER INFO LOAD FROM TXT**
           **8. BETTER PRODUCT & SUPPORT FLOW**
-          **9. BEST CHOICE BETTER MARGIN** -->
+          **9. BEST CHOICE BETTER MARGIN**
+          10. MAILBOX -->
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -212,37 +213,42 @@
                             aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-start row">
-                    <form action="mailto:contact@krys-mysteryshop-example.dev" method="get" class="col-6 mt-2"
-                          onsubmit="return orderValidation()">
+                    <form class="col-6 mt-2 was-validated"
+                          action="mailto:info@gmail.com">
                         <div class="col">
                             <label for="orderName" class="form-label"
                                    aria-labelledby="name">Your Name:</label>
                             <input type="text" id="orderName" class="form-control"
                                    aria-describedby="name block" required>
+                            <div class="invalid-feedback"> Fill your name.</div>
                         </div>
                         <div class="col mt-2">
                             <label for="orderEmail" class="form-label"
                                    aria-labelledby="email">Email:</label>
                             <input type="text" id="orderEmail" class="form-control"
-                                   aria-describedby="email block" required>
+                                   aria-describedby="email block" pattern="^\S+@\S+\.\S+$" required>
+                            <div class="invalid-feedback">Wrong email format</div>
                         </div>
                         <div class="col mt-2">
                             <label for="phoneNumber" class="form-label"
                                    aria-labelledby="email">Phone number:</label>
                             <input type="text" id="phoneNumber" class="form-control"
-                                   aria-describedby="email block" required>
+                                   aria-describedby="phone block" required>
+                            <div class="invalid-feedback">Fill your phone number</div>
                         </div>
                         <div class="col mt-2">
                             <label for="cardID" class="form-label"
                                    aria-labelledby="email">Card serial number:</label>
                             <input type="text" inputmode="numeric" id="cardID" class="form-control"
-                                   aria-describedby="email block" required>
+                                   aria-describedby="card block" pattern="\d+" required>
+                            <div class="invalid-feedback">Wrong number</div>
                         </div>
                         <div class="col mt-2">
                             <label for="orderCCV" class="form-label"
-                                   aria-labelledby="email">CCV:</label>
+                                   aria-labelledby="ccv">CCV:</label>
                             <input type="text" inputmode="numeric" id="orderCCV" class="form-control"
-                                   aria-describedby="email block" required>
+                                   aria-describedby="ccv block" pattern="[0-9]{3}" required>
+                            <div class="invalid-feedback">Invalid CCV format</div>
                         </div>
 
                         <div class="col mt-2">

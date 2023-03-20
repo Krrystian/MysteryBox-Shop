@@ -61,23 +61,23 @@ function orderOnClick(){
     });
 
 }
-function orderValidation(){
-    const ccvRegex = /^[0-9]{3}$/;
-    const emailRegex = /^\S+@\S+\.\S+$/
-    const numberRegex = /\d+/;
-    
-    let check = true;
-    const email = document.getElementById('orderEmail');
-    const number = document.getElementById('phoneNumber');
-    const ccv = document.getElementById('orderCCV');
-    const card = document.getElementById('cardID');
+// function orderValidation(){
+//     const ccvRegex = /^[0-9]{3}$/;
+//     const emailRegex = /^\S+@\S+\.\S+$/
+//     const numberRegex = /\d+/;
+//
+//     const email = document.getElementById('orderEmail');
+//     const number = document.getElementById('phoneNumber');
+//     const ccv = document.getElementById('orderCCV');
+//     const card = document.getElementById('cardID');
+//
+//     if(!ccvRegex.test(ccv.value)) {ccv.setCustomValidity('Incorrect CCV');  return false;}
+//     else if(!emailRegex.test(email.value)) {email.setCustomValidity('Incorrect Email');  return false;}
+//     else if(!numberRegex.test(number.value)) {number.setCustomValidity('Incorrect Phone Number');  return false;}
+//     else if(!numberRegex.test(card.value)){card.setCustomValidity('Incorrect Card Number');  return false;}
+//     else return true;
+// }
 
-    if(!ccvRegex.test(ccv.value)) {ccv.setCustomValidity('Incorrect CCV');  check=false;}
-    if(!emailRegex.test(email.value)) {email.setCustomValidity('Incorrect Email');  check=false;}
-    if(!numberRegex.test(number.value)) {number.setCustomValidity('Incorrect Phone Number');  check=false;}
-    if(!numberRegex.test(card.value)){card.setCustomValidity('Incorrect Card Number');  check=false;}
-    return check === true;
-}
 orderOnClick();
 closeOnClick();
 
