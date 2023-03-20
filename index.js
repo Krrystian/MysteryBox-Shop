@@ -62,19 +62,16 @@ function orderOnClick(){
 
 }
 function orderValidation(){
-    const nameRegex = /[a-zA-z]+/;
     const ccvRegex = /^[0-9]{3}$/;
     const emailRegex = /^\S+@\S+\.\S+$/
     const numberRegex = /\d+/;
-
+    
     let check = true;
-    const name = document.getElementById('orderName');
     const email = document.getElementById('orderEmail');
     const number = document.getElementById('phoneNumber');
     const ccv = document.getElementById('orderCCV');
     const card = document.getElementById('cardID');
 
-    if(!nameRegex.test(name.value)) {name.setCustomValidity('Incorrect Name'); check=false;}
     if(!ccvRegex.test(ccv.value)) {ccv.setCustomValidity('Incorrect CCV');  check=false;}
     if(!emailRegex.test(email.value)) {email.setCustomValidity('Incorrect Email');  check=false;}
     if(!numberRegex.test(number.value)) {number.setCustomValidity('Incorrect Phone Number');  check=false;}
